@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals", // Next.js 기본 설정
+    "plugin:prettier/recommended" // Prettier 설정 추가
+  ],
+  "rules": {
+		"prettier/prettier": 0
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"],
+				"paths": ["src"]
+			}
+		}
+	}
 }
